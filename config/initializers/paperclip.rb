@@ -16,5 +16,5 @@ Paperclip.options[:log_command] = false
 # you can also set 
 #   :command_path       = location of image magick tools
 #   :swallow_stderr     = capture stderr messages into stdout (and hence include in log messages)
-
+Paperclip.options[:command_path] = "/usr/local/bin"
 
