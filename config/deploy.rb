@@ -3,7 +3,7 @@
 # ENV['SP_SERVER'] でデプロイ先のホストを指定します。
 deploy_target = (ENV['SP_SERVER'] || 'localhost').strip
 puts "Now deploying to #{deploy_target.inspect}"
-
+db_server = ENV['DB_SERVER'] || "localhost"
 mm_key_path = ENV['SP_KEY'] || "~/.ec2/goku-id_rsa"
 unless File.exist?(File.expand_path(mm_key_path))
   raise "WARNING! You must set SP_KEY=/path/to/goku/private/key or copy it to ~/.ec2/goku-id_rsa"
